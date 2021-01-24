@@ -1,0 +1,27 @@
+.container {
+  margin-left: 10vw;
+  padding: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 35px 25px;
+  grid-template-areas:
+    '. . . .'
+    'graph-one graph-one graph-two graph-two'
+    'sales-order sales-order sales-order purchase-order';
+}
+.graph-one {
+  grid-area: graph-one;
+}
+.graph-two {
+  grid-area: graph-two;
+}
+.sales-order {
+  grid-area: sales-order;
+}
+.purchase-order {
+  grid-area: purchase-order;
+}

@@ -6,7 +6,7 @@ import Products from '../../pages/Products';
 import './Navbar.css';
 import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
 
-export default function Routes() {
+export default function Navbar() {
   return (
     <Router>
       <div>
