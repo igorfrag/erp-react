@@ -4,6 +4,7 @@ import Dashboard from '../../pages/Dashboard';
 import Sales from '../../pages/Sales';
 import Products from '../../pages/Products';
 import './Navbar.css';
+import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
 
 export default function Routes() {
   return (
@@ -12,13 +13,21 @@ export default function Routes() {
         <nav className='navbar'>
           <ul className='navbar-nav'>
             <li>
-              <Link to='/'>Dashboard</Link>
+              <Link to='/'>
+                <FiGrid />
+                Dashboard
+              </Link>
             </li>
             <li>
-              <Link to='/sales'>Sales</Link>
+              <Link to='/sales'>
+                <FiDollarSign />
+                Sales
+              </Link>
             </li>
             <li>
-              <Link to='/products'>Products</Link>
+              <Link to='/products'>
+                <FiBox /> Products
+              </Link>
             </li>
             <li>LOGO</li>
           </ul>
