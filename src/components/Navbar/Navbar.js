@@ -1,50 +1,64 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Dashboard from '../../pages/Dashboard';
-import Sales from '../../pages/Sales';
-import Products from '../../pages/Products';
-import './Navbar.css';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
 
-export default function Navbar() {
-  return (
-    <Router>
-      <div>
-        <nav className='navbar'>
-          <ul className='navbar-nav'>
-            <li>
-              <Link to='/'>
-                <FiGrid />
-                Dashboard
-              </Link>
-            </li>
-            <li>
-              <Link to='/sales'>
-                <FiDollarSign />
-                Sales
-              </Link>
-            </li>
-            <li>
-              <Link to='/products'>
-                <FiBox /> Products
-              </Link>
-            </li>
-            <li>LOGO</li>
-          </ul>
-        </nav>
+const MenuItem = styled(Link)`
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  :hover {
+    background-color: #111;
+  }
+`;
+const MenuList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+  margin: 0;
+`;
+const Menu = styled.nav`
+  width: 10vw;
+  background-color: #333;
+  position: fixed;
+  height: 100vh;
+`;
 
-        <Switch>
-          <Route path='/sales'>
-            <Sales />
-          </Route>
-          <Route path='/Products'>
-            <Products />
-          </Route>
-          <Route path='/'>
-            <Dashboard />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+export default function Navbar() {
+  const links = [
+    {
+      route: '/',
+      title: 'Dashboard',
+      icon: <FiGrid />,
+    },
+    {
+      route: '/sales',
+      title: 'Sales',
+      icon: <FiDollarSign />,
+    },
+    {
+      route: '/products',
+      title: 'Products',
+      icon: <FiBox />,
+    },
+  ];
+
+  const navLinks = links.map((link) => {
+    return (
+      <li>
+        <MenuItem to={link.route}>
+          {link.icon}
+          {link.title}
+        </MenuItem>
+      </li>
+    );
+  });
+
+  return (
+    <Menu>
+      <MenuList>{navLinks}</MenuList>
+    </Menu>
   );
 }
