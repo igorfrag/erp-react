@@ -29,16 +29,19 @@ const Menu = styled.nav`
 export default function Navbar() {
   const links = [
     {
+      key: 1,
       route: '/',
       title: 'Dashboard',
       icon: <FiGrid />,
     },
     {
+      key: 2,
       route: '/sales',
       title: 'Sales',
       icon: <FiDollarSign />,
     },
     {
+      key: 3,
       route: '/products',
       title: 'Products',
       icon: <FiBox />,
@@ -47,7 +50,7 @@ export default function Navbar() {
 
   const navLinks = links.map((link) => {
     return (
-      <li>
+      <li key={link.key}>
         <MenuItem to={link.route}>
           {link.icon}
           {link.title}
