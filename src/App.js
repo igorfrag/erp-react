@@ -1,12 +1,12 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Main from './pages/Main';
+import Router from './router/Router';
 
 function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Main></Main>
+      <Router></Router>
     </>
   );
 }

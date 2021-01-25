@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Dashboard from './Dashboard';
-import Products from './Products';
-import Sales from './Sales';
+import Dashboard from '../pages/Dashboard';
+import Products from '../pages/Products';
+import Sales from '../pages/Sales';
 
-function Main() {
+function Router() {
   return (
     <div>
       <Switch>
@@ -24,4 +24,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Router;
