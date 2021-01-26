@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 let TableContainer = styled.table`
@@ -15,33 +15,28 @@ let TableContainer = styled.table`
   }
 `;
 
-const data = [
-  {
-    code: 1,
-    name: 'Pen',
-    price: 2.99,
-    stock: 300,
-  },
-  {
-    code: 2,
-    name: 'Pencil',
-    price: 1.99,
-    stock: 285,
-  },
-];
-
-const tableData = data.map((entry) => {
-  return (
-    <tr key={entry.code}>
-      <td>{entry.code}</td>
-      <td>{entry.name}</td>
-      <td>{entry.price}</td>
-      <td>{entry.stock}</td>
-    </tr>
-  );
-});
-
 function Table() {
+  const [data, setData] = useState([]);
+  const fetchData = () => {
+    fetch(`http://localhost:3080/products/list`)
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const tableData = data.map((entry) => {
+    return (
+      <tr key={entry.key}>
+        <td>{entry.key}</td>
+        <td>{entry.name}</td>
+        <td>{entry.price}</td>
+      </tr>
+    );
+  });
+
   return (
     <TableContainer className='table'>
       <thead>

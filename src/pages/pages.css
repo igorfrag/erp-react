@@ -13,8 +13,8 @@
     'graph-one graph-one graph-two graph-two'
     'sales-order sales-order sales-order purchase-order';
 }
-.graph-one {
-  grid-area: graph-one;
+.table {
+  grid-area: table;
 }
 .graph-two {
   grid-area: graph-two;
