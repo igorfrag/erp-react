@@ -5,11 +5,11 @@ import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
 
 const MenuItem = styled(Link)`
   display: block;
-  color: white;
+  color: #ffffff;
   padding: 14px 16px;
   text-decoration: none;
   :hover {
-    background-color: #111;
+    background-color: #6200ee;
   }
 `;
 const MenuList = styled.ul`
@@ -21,7 +21,7 @@ const MenuList = styled.ul`
 `;
 const Menu = styled.nav`
   width: 10vw;
-  background-color: #333;
+  background-color: #3700b3;
   position: fixed;
   height: 100vh;
 `;
