@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Chart from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
 const CardContainer = styled.div`

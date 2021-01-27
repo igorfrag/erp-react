@@ -8,8 +8,24 @@ const CardContainer = styled.div`
   max-width: 300px;
   max-height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+`;
+
+const CardIcon = styled.div`
+  margin-right: auto;
+  margin-left: 15px;
+  background-color: indigo;
+  border-radius: 10px;
+  border: 1px hidden white;
+
+  & > svg {
+    width: 50px;
+    height: 50px;
+    fill: ${(props) => props.iconFill};
+    stroke: ${(props) => props.iconStroke};
+    transform: scale(${(props) => props.iconScale || '0.6'});
+  }
 `;
 
 const CardValue = styled.h2``;
@@ -32,6 +48,13 @@ function Card(props) {
   }
   return (
     <CardContainer>
+      <CardIcon
+        iconScale={props.iconScale}
+        iconFill={props.iconFill}
+        iconStroke={props.iconStroke}
+      >
+        {props.icon}
+      </CardIcon>
       <CardContent>
         <CardValue>{getValue}</CardValue>
         <CardTitle>{props.title}</CardTitle>
