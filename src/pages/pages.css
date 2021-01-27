@@ -1,6 +1,8 @@
 .container {
   margin-left: 10vw;
   padding: 50px;
+  height: 100vh;
+  background-color: whitesmoke;
 }
 
 .grid-container {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { useTable } from 'react-table';
 
 function Table() {
@@ -14,30 +13,6 @@ function Table() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const tableData = React.useMemo(
-    () => [
-      {
-        key: 1,
-        name: 'Pen',
-        price: 22,
-        stock: 300,
-      },
-      {
-        key: 2,
-        name: 'Pencil',
-        price: 22,
-        stock: 300,
-      },
-      {
-        key: 3,
-        name: 'Notebook',
-        price: 22,
-        stock: 300,
-      },
-    ],
-    []
-  );
 
   const columns = React.useMemo(
     () => [

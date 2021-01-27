@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const CardContainer = styled.div`
   border: 1px solid black;
   border-radius: 10px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
