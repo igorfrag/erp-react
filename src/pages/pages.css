@@ -15,11 +15,28 @@
     'graph-one graph-one graph-two graph-two'
     'sales-order sales-order sales-order purchase-order';
 }
+
+.grid-container-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0fr 1fr 1fr;
+  gap: 35px 25px;
+  grid-template-areas:
+    '. . . .'
+    'dashboard-graph dashboard-graph dashboard-graph-two dashboard-graph-two'
+    '. . . . ';
+}
+
 .table {
   grid-area: table;
 }
-.graph-two {
-  grid-area: graph-two;
+
+.dashboard-graph {
+  grid-area: dashboard-graph;
+}
+
+.dashboard-graph-two {
+  grid-area: dashboard-graph-two;
 }
 .sales-order {
   grid-area: sales-order;
