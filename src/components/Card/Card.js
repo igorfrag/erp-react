@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
-  border: 1px solid black;
+  border: 1px solid lavender;
   border-radius: 10px;
   background-color: white;
+  max-width: 300px;
+  max-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
