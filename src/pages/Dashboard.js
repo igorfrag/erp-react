@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from '../components/Card/Card';
 import ChartCard from '../components/Card/ChartCard';
-import Table from '../components/Table/Table';
 import './pages.css';
 import { FaCashRegister } from 'react-icons/fa';
 import { FiBox, FiDollarSign } from 'react-icons/fi';
 import { BiPackage } from 'react-icons/bi';
+import SalesOrders from '../components/Table/SalesOrders';
 
 function Dashboard() {
   return (
@@ -50,7 +50,9 @@ function Dashboard() {
           <ChartCard className='GraphThree' title='Products Sold'></ChartCard>
         </div>
         <div className='Sales'>
-          <div className='SalesOrders'></div>
+          <div className='SalesOrders'>
+            <SalesOrders></SalesOrders>
+          </div>
           <div className='PurchaseOrders'></div>
         </div>
       </div>
