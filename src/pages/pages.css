@@ -5,42 +5,70 @@
   background-color: whitesmoke;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 35px 25px;
-  grid-template-areas:
-    '. . . .'
-    'graph-one graph-one graph-two graph-two'
-    'sales-order sales-order sales-order purchase-order';
-}
-
-.grid-container-dashboard {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0fr 1fr 1fr;
-  gap: 35px 25px;
-  grid-template-areas:
-    '. . . .'
-    'dashboard-graph dashboard-graph dashboard-graph-two dashboard-graph-two'
-    '. . . . ';
-}
-
 .table {
   grid-area: table;
 }
 
-.dashboard-graph {
-  grid-area: dashboard-graph;
+.grid-container-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 35px 25px;
+  grid-template-areas:
+    'CardOne CardTwo CardThree CardFour'
+    'Graphs Graphs Graphs Graphs'
+    'Sales Sales Sales Sales';
 }
 
-.dashboard-graph-two {
-  grid-area: dashboard-graph-two;
+.Graphs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 35px 25px;
+  grid-template-areas: 'GraphOne GraphTwo GraphThree';
+  grid-area: Graphs;
 }
-.sales-order {
-  grid-area: sales-order;
+
+.GraphOne {
+  grid-area: GraphOne;
 }
-.purchase-order {
-  grid-area: purchase-order;
+
+.GraphTwo {
+  grid-area: GraphTwo;
+}
+
+.GraphThree {
+  grid-area: GraphThree;
+}
+
+.Sales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 35px 25px;
+  grid-template-areas: 'SalesOrders SalesOrders PurchaseOrders';
+  grid-area: Sales;
+}
+
+.SalesOrders {
+  grid-area: SalesOrders;
+}
+
+.PurchaseOrders {
+  grid-area: PurchaseOrders;
+}
+
+.CardOne {
+  grid-area: CardOne;
+}
+
+.CardTwo {
+  grid-area: CardTwo;
+}
+
+.CardThree {
+  grid-area: CardThree;
+}
+
+.CardFour {
+  grid-area: CardFour;
 }

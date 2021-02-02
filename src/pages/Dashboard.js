@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card/Card';
 import ChartCard from '../components/Card/ChartCard';
+import Table from '../components/Table/Table';
 import './pages.css';
 import { FaCashRegister } from 'react-icons/fa';
 import { FiBox, FiDollarSign } from 'react-icons/fi';
@@ -12,6 +13,7 @@ function Dashboard() {
       Dashboard
       <div className='grid-container-dashboard'>
         <Card
+          className='CardOne'
           title='Total Sales'
           value={21844.7}
           isMoney='true'
@@ -19,6 +21,7 @@ function Dashboard() {
           iconFill='white'
         ></Card>
         <Card
+          className='CardTwo'
           title='Total Cost'
           value={20650.0}
           isMoney='true'
@@ -26,6 +29,7 @@ function Dashboard() {
           iconStroke='white'
         ></Card>
         <Card
+          className='CardThree'
           title='Products Sold'
           value={5420}
           icon={<FiBox />}
@@ -33,17 +37,21 @@ function Dashboard() {
           iconStroke='white'
         ></Card>
         <Card
+          className='CardFour'
           title='Stock on Hand'
           value={251844.7}
           isMoney='true'
           icon={<BiPackage />}
           iconFill='white'
         ></Card>
-        <div className='dashboard-graph'>
-          <ChartCard title='Teste'></ChartCard>
+        <div className='Graphs'>
+          <ChartCard className='GraphOne' title='Revenue vs Costs'></ChartCard>
+          <ChartCard className='GraphTwo' title='Purchase Summary'></ChartCard>
+          <ChartCard className='GraphThree' title='Products Sold'></ChartCard>
         </div>
-        <div className='dashboard-graph-two'>
-          <ChartCard title='Teste'></ChartCard>
+        <div className='Sales'>
+          <div className='SalesOrders'></div>
+          <div className='PurchaseOrders'></div>
         </div>
       </div>
     </div>
