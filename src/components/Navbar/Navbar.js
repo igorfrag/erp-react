@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
 
 const MenuItem = styled(Link)`
-  display: block;
+  display: flex;
+  align-items: center;
   color: #ffffff;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,6 +25,16 @@ const Menu = styled.nav`
   background-color: #3700b3;
   position: fixed;
   height: 100vh;
+`;
+const ItemIcon = styled.div`
+  & > svg {
+    transform: scale(1.3);
+    display: block;
+  }
+`;
+
+const LinkText = styled.span`
+  margin-left: 10px;
 `;
 
 export default function Navbar() {
@@ -52,8 +63,9 @@ export default function Navbar() {
     return (
       <li key={link.key}>
         <MenuItem to={link.route}>
-          {link.icon}
-          {link.title}
+          <ItemIcon>{link.icon}</ItemIcon>
+
+          <LinkText>{link.title}</LinkText>
         </MenuItem>
       </li>
     );
