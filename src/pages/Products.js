@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Table from '../components/Table/Table';
+import ProductsTable from '../components/Table/ProductsTable';
 import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
 import ProductsForm from '../components/Forms/ProductsForm';
@@ -47,7 +47,7 @@ function Products() {
           </Modal>
         </div>
 
-        <Table className='table' />
+        <ProductsTable className='table' />
       </Container>
     </>
   );

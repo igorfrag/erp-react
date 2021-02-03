@@ -6,6 +6,7 @@ import { FaCashRegister } from 'react-icons/fa';
 import { FiBox, FiDollarSign } from 'react-icons/fi';
 import { BiPackage } from 'react-icons/bi';
 import SalesOrders from '../components/Table/SalesOrders';
+import PurchaseOrders from '../components/Table/PurchaseOrders';
 
 function Dashboard() {
   return (
@@ -53,7 +54,9 @@ function Dashboard() {
           <div className='SalesOrders'>
             <SalesOrders></SalesOrders>
           </div>
-          <div className='PurchaseOrders'></div>
+          <div className='PurchaseOrders'>
+            <PurchaseOrders></PurchaseOrders>
+          </div>
         </div>
       </div>
     </div>
