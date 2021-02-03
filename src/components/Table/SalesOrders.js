@@ -20,7 +20,7 @@ function SalesOrders() {
   const [data, setData] = useState([]);
 
   const fetchData = () => {
-    fetch(`http://localhost:3080/products/list`)
+    fetch(`http://localhost:3080/sales`)
       .then((res) => res.json())
       .then((json) => setData(json));
   };
@@ -33,25 +33,25 @@ function SalesOrders() {
     () => [
       {
         Header: 'Order ID',
-        accessor: 'key', // accessor is the "key" in the data
+        accessor: 'orderID', // accessor is the "key" in the data
       },
       {
         Header: 'Customer',
-        accessor: 'name',
+        accessor: 'customer.name',
       },
 
       {
         Header: 'Date',
-        accessor: 'price',
+        accessor: 'date',
       },
 
       {
         Header: 'Status',
-        accessor: 'stock',
+        accessor: 'status',
       },
       {
         Header: 'Order Total',
-        accessor: '',
+        accessor: 'orderTotal',
       },
     ],
     []
@@ -64,6 +64,7 @@ function SalesOrders() {
     rows,
     prepareRow,
   } = useTable({ columns, data });
+  const firstPageRows = rows.slice(0, 20);
 
   return (
     <TableContainer>
@@ -88,7 +89,7 @@ function SalesOrders() {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {firstPageRows.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
