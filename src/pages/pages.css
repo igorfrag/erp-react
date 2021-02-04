@@ -8,7 +8,7 @@
 .table {
   grid-area: table;
 }
-
+/* DASHBOARD */
 .grid-container-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -71,4 +71,28 @@
 
 .CardFour {
   grid-area: CardFour;
+}
+
+/* PRODUCTS */
+
+.grid-container-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 35px 25px;
+  grid-template-areas:
+    'ButtonOne ButtonOne ButtonTwo ButtonTwo'
+    'ProductTable ProductTable . .'
+    'ProductTable ProductTable . .';
+}
+
+.ButtonOne {
+  grid-area: ButtonOne;
+}
+
+.ButtonTwo {
+  grid-area: ButtonTwo;
+}
+
+.ProductTable {
+  grid-area: ProductTable;
 }
