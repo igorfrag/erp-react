@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
+import { FiBox, FiDollarSign, FiGrid, FiUsers } from 'react-icons/fi';
 import SvgLogo from './SvgLogo';
 
 const MenuItem = styled(Link)`
@@ -57,6 +57,12 @@ export default function Navbar() {
       route: '/products',
       title: 'Products',
       icon: <FiBox />,
+    },
+    {
+      key: 4,
+      route: '/customers',
+      title: 'Customers',
+      icon: <FiUsers />,
     },
   ];
 

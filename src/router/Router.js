@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
+import Customers from '../pages/Customers';
 import Dashboard from '../pages/Dashboard';
 import Products from '../pages/Products';
 import Sales from '../pages/Sales';
@@ -18,7 +18,9 @@ function Router() {
         <Route exact path='/sales'>
           <Sales />
         </Route>
-        <Route></Route>
+        <Route exact path='/customers'>
+          <Customers />
+        </Route>
       </Switch>
     </div>
   );
