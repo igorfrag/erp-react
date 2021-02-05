@@ -17,17 +17,38 @@ const TableContainer = styled.div`
 `;
 
 function PurchaseOrders() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const fetchData = () => {
-    fetch(`http://localhost:3080/sales`)
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  };
+  // const fetchData = () => {
+  //   fetch(`http://localhost:3080/sales`)
+  //     .then((res) => res.json())
+  //     .then((json) => setData(json));
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  const data = React.useMemo(
+    () => [
+      {
+        orderID: 'OR001',
+        col2: 'Lorem',
+        orderTotal: 550,
+      },
+      {
+        orderID: 'OR002',
+        col2: 'Ipsum',
+        orderTotal: 400,
+      },
+      {
+        orderID: 'OR003',
+        col2: 'Dolor ',
+        orderTotal: 600,
+      },
+    ],
+    []
+  );
 
   const columns = React.useMemo(
     () => [

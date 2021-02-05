@@ -17,17 +17,44 @@ const TableContainer = styled.div`
 `;
 
 function SalesOrders() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const fetchData = () => {
-    fetch(`http://localhost:3080/sales`)
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  };
+  // const fetchData = () => {
+  //   fetch(`http://localhost:3080/sales`)
+  //     .then((res) => res.json())
+  //     .then((json) => setData(json));
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  const data = React.useMemo(
+    () => [
+      {
+        orderID: 'OR001',
+        name: 'Lorem',
+        date: '01/01/2021',
+        status: 'OK',
+        orderTotal: 550,
+      },
+      {
+        orderID: 'OR002',
+        name: 'Ipsum',
+        date: '01/01/2021',
+        status: 'OK',
+        orderTotal: 400,
+      },
+      {
+        orderID: 'OR003',
+        name: 'Dolor ',
+        date: '01/01/2021',
+        status: 'OK',
+        orderTotal: 600,
+      },
+    ],
+    []
+  );
 
   const columns = React.useMemo(
     () => [
@@ -37,7 +64,7 @@ function SalesOrders() {
       },
       {
         Header: 'Customer',
-        accessor: 'customer.name',
+        accessor: 'name', //customer.name
       },
 
       {
