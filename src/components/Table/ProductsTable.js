@@ -16,7 +16,7 @@ const TableContainer = styled.div`
   align-items: flex=start;
 `;
 
-function Table() {
+function ProductsTable() {
   const [data, setData] = useState([]);
 
   const fetchData = () => {
@@ -117,4 +117,4 @@ function Table() {
     </TableContainer>
   );
 }
-export default Table;
+export default ProductsTable;
