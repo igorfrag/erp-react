@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FiBox, FiDollarSign, FiGrid } from 'react-icons/fi';
+import SvgLogo from './SvgLogo';
 
 const MenuItem = styled(Link)`
   display: flex;
@@ -16,7 +17,7 @@ const MenuItem = styled(Link)`
 const MenuList = styled.ul`
   list-style: none;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 `;
@@ -73,6 +74,7 @@ export default function Navbar() {
 
   return (
     <Menu>
+      <SvgLogo></SvgLogo>
       <MenuList>{navLinks}</MenuList>
     </Menu>
   );
