@@ -81,8 +81,8 @@
   gap: 35px 25px;
   grid-template-areas:
     'ButtonOne ButtonOne ButtonTwo ButtonTwo'
-    'ProductTable ProductTable . .'
-    'ProductTable ProductTable . .';
+    'ProductCardContainer ProductCardContainer . .'
+    'ProductCardContainer ProductCardContainer . .';
 }
 
 .ButtonOne {
@@ -93,6 +93,6 @@
   grid-area: ButtonTwo;
 }
 
-.ProductTable {
-  grid-area: ProductTable;
+.ProductCardContainer {
+  grid-area: ProductCardContainer;
 }
