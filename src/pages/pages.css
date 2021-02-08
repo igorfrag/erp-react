@@ -1,27 +1,98 @@
 .container {
   margin-left: 10vw;
   padding: 50px;
+  height: 100vh;
+  background-color: whitesmoke;
 }
 
-.grid-container {
+.table {
+  grid-area: table;
+}
+/* DASHBOARD */
+.grid-container-dashboard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 35px 25px;
   grid-template-areas:
-    '. . . .'
-    'graph-one graph-one graph-two graph-two'
-    'sales-order sales-order sales-order purchase-order';
+    'CardOne CardTwo CardThree CardFour'
+    'Graphs Graphs Graphs Graphs'
+    'Sales Sales Sales Sales';
 }
-.graph-one {
-  grid-area: graph-one;
+
+.Graphs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 35px 25px;
+  grid-template-areas: 'GraphOne GraphTwo GraphThree';
+  grid-area: Graphs;
 }
-.graph-two {
-  grid-area: graph-two;
+
+.GraphOne {
+  grid-area: GraphOne;
 }
-.sales-order {
-  grid-area: sales-order;
+
+.GraphTwo {
+  grid-area: GraphTwo;
 }
-.purchase-order {
-  grid-area: purchase-order;
+
+.GraphThree {
+  grid-area: GraphThree;
+}
+
+.Sales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 35px 25px;
+  grid-template-areas: 'SalesOrders SalesOrders PurchaseOrders';
+  grid-area: Sales;
+}
+
+.SalesOrders {
+  grid-area: SalesOrders;
+}
+
+.PurchaseOrders {
+  grid-area: PurchaseOrders;
+}
+
+.CardOne {
+  grid-area: CardOne;
+}
+
+.CardTwo {
+  grid-area: CardTwo;
+}
+
+.CardThree {
+  grid-area: CardThree;
+}
+
+.CardFour {
+  grid-area: CardFour;
+}
+
+/* PRODUCTS */
+
+.grid-container-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 35px 25px;
+  grid-template-areas:
+    'ButtonOne ButtonOne ButtonTwo ButtonTwo'
+    'ProductCardContainer ProductCardContainer ProductCardContainer ProductCardContainer'
+    'ProductCardContainer ProductCardContainer ProductCardContainer ProductCardContainer';
+}
+
+.ButtonOne {
+  grid-area: ButtonOne;
+}
+
+.ButtonTwo {
+  grid-area: ButtonTwo;
+}
+
+.ProductCardContainer {
+  grid-area: ProductCardContainer;
 }

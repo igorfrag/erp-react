@@ -2,3 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+.primary {
+  color: #501cd8;
+}
+
+.gray {
+  color: #262f3c;
+}
