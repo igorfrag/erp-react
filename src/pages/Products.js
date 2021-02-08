@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import './pages.css';
-import ProductsTable from '../components/Table/ProductsTable';
 import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
 import ProductsForm from '../components/Forms/ProductsForm';
+import ProductCardList from '../components/Card/ProductCardList';
 
 function Products() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +19,8 @@ function Products() {
               <ProductsForm></ProductsForm>
             </Modal>
           </div>
-          <div className='ProductTable'>
-            <ProductsTable />
+          <div className='ProductCardContainer'>
+            <ProductCardList />
           </div>
         </div>
       </div>
