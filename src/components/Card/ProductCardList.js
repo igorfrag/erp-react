@@ -8,6 +8,8 @@ const ProductItem = styled.li`
 
 const ProductUl = styled.ul`
   list-style: none;
+  flex-wrap: wrap;
+  display: flex;
 `;
 
 function ProductCardList() {
